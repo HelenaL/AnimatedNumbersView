@@ -3,9 +3,9 @@
 
 A simple label view that animates each digit of a number with rolling a row of digits.
 <div style="display: flex; justify-content: center;">
-  <img src="https://github.com/HelenaL/AnimatedNumbersView/assets/5014495/f514b259-8d1e-4800-a3b6-a6fdebb213e8" width="28%" alt="example 1" style="margin-right: 100px;"/>
-  <img src="https://github.com/HelenaL/AnimatedNumbersView/assets/5014495/bda2cbfb-b5de-49e5-8103-f51040a00cf2" width="28%" alt="example 2" style="margin-right: 100px;"/>
-  <img src="https://github.com/HelenaL/AnimatedNumbersView/assets/5014495/890ed5d5-d1c7-4b50-94b3-043246a13033" width="28%" alt="example 3" style="margin-right: 100px;"/>
+  <img src="https://github.com/HelenaL/AnimatedNumbersView/blob/main/Images/img_1.gif" width="25%" alt="example 1" style="margin-right: 100px;"/>
+  <img src="https://github.com/HelenaL/AnimatedNumbersView/blob/main/Images/img_2.gif" width="25%" alt="example 2" style="margin-right: 100px;"/>
+  <img src="https://github.com/HelenaL/AnimatedNumbersView/blob/main/Images/img_3.gif" width="25%" alt="example 3" style="margin-right: 100px;"/>
 </div>
 
 ## Requirements
