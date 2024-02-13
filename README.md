@@ -13,10 +13,77 @@ A simple label view that animates each digit of a number with rolling a row of d
 - Swift 5.0+
   
 ## Installation
+
 ### Swift Package Manager
 ```swift
 dependencies: [
     .package(url: "https://github.com/HelenaL/AnimatedNumbersView.git", from: "1.0.0")
 ]
 ```
+
+## Initialization
+Firstly, import the package to a project.
+```swift
+import AnimatedNumbersView
+```
+
+AnimatedNumbersView might be initialized in Interface Builder or programmatically. For initializeing in code: 
+```swift
+let animatedNumbersView = AnimatedNumbersView(frame: .zero)
+```
+Then set number: 
+  * with animation
+  ```swift
+  animatedNumbersView.setNumber(value: 938, animation: true)
+  ```
+  * without animation
+  ```swift
+  animatedNumbersView.setNumber(value: 938)
+  ```
+## Configuration
+
+### Set view style
+Color and font can be adjusted by setting `numbersViewConfig`.
+```swift
+animatedNumbersView.numbersViewConfig = NumbersViewConfig(digitColor: .darkGray,
+                                                          digitFont: UIFont.systemFont(ofSize: 30),
+                                                          viewBackground: .systemGray6)
+```
+
+### Set animation configuration
+Duration, delay, and curve option of the animation can be adjusted by setting `rollingAnimationConfig`.
+```swift
+animatedNumbersView.rollingAnimationConfig = RollingAnimationConfig(duration: 0.5,
+                                                                    delay: 0,
+                                                                    animationOptions: [.curveEaseOut])
+```
+
+### Set NumberFormatter style 
+For presenting given value as `Double`, `Int`, `Float`, or `Currency`, `NumberFormatter` can be used. After specifying formatter's parameters, set it to `animatedNumbersView.formatter` (for more information, read [documentation](https://developer.apple.com/documentation/foundation/numberformatter)).
+```swift
+let formatter = NumberFormatter()
+formatter.numberStyle = .decimal
+formatter.usesGroupingSeparator = false
+formatter.locale = Locale.current
+formatter.decimalSeparator = "."
+
+animatedNumbersView.formatter = formatter
+```
+For getting formetted string, read-only property `formattedValueString` can be used.
+```swift
+let formattedString = animatedNumbersView.formattedValueString
+```
+
+### Completion
+An optional completion block can be called when the animation finishes. If `animation` is `false`, then `completion` will be called immediately.
+
+```swift
+animatedNumbersView.setNumber(value: 938, animation: true) {
+  // completion
+}
+```
+
+## License
+This project was released under the [MIT](https://github.com/HelenaL/AnimatedNumbersView/blob/main/LICENSE) license.
+
 
